@@ -92,3 +92,6 @@ sudo service nginx restart
 
 sudo apt-get autoremove;
 
+
+#vi /etc/nginx/nginx.conf
+#client_max_body_size 20m;
