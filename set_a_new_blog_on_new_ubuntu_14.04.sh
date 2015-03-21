@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 # WARNING: only for ubuntu 14.04
 
@@ -18,7 +18,6 @@ sudo add-apt-repository ppa:chris-lea/node.js;
 sudo apt-get update;
 sudo apt-get -y install nodejs;
 
-sudo apt-get -y install git-core;
 
 sudo apt-get -y install libmagickwand-dev;
 
@@ -67,12 +66,12 @@ rm /etc/nginx/sites-enabled/default
 touch /etc/nginx/sites-enabled/although.com.conf
 
 
-sudo sh -c echo '''server {
+sudo sh -c "echo '''server {
     listen 80 default;
     server_name although2013.com;
     root /var/www/although.com/master/public;
     passenger_enabled on;
-}''' > /etc/nginx/sites-enabled/although.com.conf;
+}''' > /etc/nginx/sites-enabled/although.com.conf;"
 
 
 sudo service nginx restart
